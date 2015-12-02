@@ -36,37 +36,12 @@ public class Solver
 				
 			}
 		}
-			if (stack.isEmpty())
-				System.out.println("This puzzle is unsolvable");
-			else
-			{
-				stack.peek().print();
-				System.out.println("Successfully solved!");
-			}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		/**
-		//System.out.println(board.get(8,6));
-		board.print();
-		//board.remove(8,6);
-		System.out.println(board.canPlace(8,6,2));
-		System.out.println(board.canPlace(8,7,2));
-		System.out.println(board.canPlace(8,7,0));
-		System.out.println(board.canPlace(6,2,9));
-		System.out.println(board.canPlace(0,0,4));
-		System.out.println(board.solved());
-		*/
-		
-		
+		if (stack.isEmpty())
+			System.out.println("This puzzle is unsolvable");
+		else
+		{
+			stack.peek().print();
+			System.out.println("Successfully solved!");
+		}
 	}
 }
