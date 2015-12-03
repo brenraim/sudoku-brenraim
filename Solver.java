@@ -9,8 +9,8 @@ public class Solver
 	public static void main (String [] args)
 	{
 		//HOW TO CALL DIFFERENT FILES
-		//With no arguments, the default file is Puzzle1.csv
-		//If there is an argument, the file is the arg + .csv (if arg[0] is 'Test', the file will be Test.csv
+		//If you do not add any arguments, the default file is Puzzle1.csv
+		//If you add an argument, the file is the arg + .csv (if arg[0] is 'Test', the file will be Test.csv
 		
 		String fileName = "Puzzle1.csv";
 		if (args.length > 0)
@@ -20,6 +20,9 @@ public class Solver
 		Stack<SudokuBoard> stack = new LinkedList<SudokuBoard>();
 		stack.push(board);
 		SudokuBoard temp;
+		
+		long tStart = System.currentTimeMillis();
+		
 		while(stack.isEmpty() == false && stack.peek().solved() == false)
 		{
 			temp = stack.pop();
@@ -41,7 +44,7 @@ public class Solver
 		else
 		{
 			stack.peek().print();
-			System.out.println("Successfully solved!");
+			System.out.println("Successfully solved in " + (System.currentTimeMillis() - tStart) + " Milliseconds");
 		}
 	}
 }

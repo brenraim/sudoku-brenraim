@@ -147,7 +147,7 @@ public class SudokuBoard
 	public int[] mostConstrained()
 	{
 		int[] temp = {0,0};   //row, col
-		int best = 9;       //amount of possible values
+		int best = 10;       //amount of possible values
 		int count = 0;			//temporary summation of possibilities
 		for (int row = 0; row < 9; row++)
 		{

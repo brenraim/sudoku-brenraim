@@ -1,6 +1,6 @@
 /**	@author Brendan Raimann
 *	11/24/15
-*	@version 1.1 - Final
+*	@version 1.2 - Fixed for Stack
 * 	Linked List data structure
 */
 import java.util.Iterator;
@@ -74,7 +74,7 @@ public class LinkedList<E> implements Iterable<E>, Stack<E>, Queue<E>
 	*/
 	public void push(E item)
 	{
-		add(item);
+		addFirst(item);
 	}
 	
 
@@ -255,7 +255,7 @@ public class LinkedList<E> implements Iterable<E>, Stack<E>, Queue<E>
 	public E set(int index, E o)
 	{
 		if (index >= size || head == null)
-			throw new IndexOutOfBoundsException("The index of " + index + " is greater than the size of the list");
+			throw new IndexOutOfBoundsException("The index of " + index + " is not in the list");
 		if (index < 0)
 			throw new IllegalArgumentException("The index of " + index + " is below zero");
 		int count = 0;
