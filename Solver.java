@@ -8,6 +8,7 @@ public class Solver
 {
 	public static void main (String [] args)
 	{
+
 		//HOW TO CALL DIFFERENT FILES
 		//If you do not add any arguments, the default file is Puzzle1.csv
 		//If you add an argument, the file is the arg + .csv (if arg[0] is 'Test', the file will be Test.csv

@@ -93,10 +93,10 @@ public class SudokuBoard
 	{
 		if (gameBoard[r][c] != 0)
 				return false;
-		for (int i = 0; i < 9; i++)
+		for (int i = 0; i < 9; i++)  //checks vertically and horizontally
 			if (gameBoard[r][i] == n || gameBoard[i][c] == n)
 				return false;
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i < 3; i++)	 //checks 3x3 section
 			for (int x = 0; x < 3; x++)
 				if (gameBoard[i+((r/3)*3)][x+((c/3)*3)] == n) //e.g. the location {8,7} would become {6,6}, then adding i and x checks the rest of the section 
 					return false;
@@ -165,6 +165,8 @@ public class SudokuBoard
 					temp[0] = row;
 					temp[1] = col;
 				}
+				if (count == 1)
+					return temp;
 			}
 		}
 		return temp;
