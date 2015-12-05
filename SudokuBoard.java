@@ -2,7 +2,7 @@
 *	Brendan Raimann
 *	12/2/15
 *	This program solves any solvable Sudoku Board
-*	Version 1.0
+*	Version 1.21 - Final
 */
 public class SudokuBoard
 {

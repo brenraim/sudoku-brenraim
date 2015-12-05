@@ -1,6 +1,6 @@
 /**	@author Brendan Raimann
 *	11/24/15
-*	@version 1.2 - Fixed for Stack
+*	@version 1.21 - Final
 * 	Linked List data structure
 */
 import java.util.Iterator;
